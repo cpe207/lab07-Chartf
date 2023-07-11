@@ -34,6 +34,9 @@ passwordInput.onkeyup = () => {
 
 submitBtn.onclick = () => {
   let isFirstNameOk = false;
+  let isLastNameOk = false;
+  let isEmailOk = false;
+  let isPasswordOk = false;
   if (firstNameInput.value === "") {
     firstNameInput.classList.add("is-invalid");
   } else {
@@ -41,7 +44,7 @@ submitBtn.onclick = () => {
     isFirstNameOk = true; // Set to true when input is valid
   }
 
-  let isLastNameOk = false;
+  
   if (lastNameInput.value === "") {
     lastNameInput.classList.add("is-invalid");
   } else {
@@ -49,7 +52,7 @@ submitBtn.onclick = () => {
     isLastNameOk = true; // Set to true when input is valid
   }
 
-  let isEmailOk = false;
+  
   if (emailInput.value === "" || !validateEmail(emailInput.value)) {
     emailInput.classList.add("is-invalid");
   } else {
@@ -57,7 +60,7 @@ submitBtn.onclick = () => {
     isEmailOk = true; // Set to true when input is valid
   }
 
-  let isPasswordOk = false;
+  
   if (passwordInput.value.length >= 6) {
     passwordInput.classList.add("is-valid");
     isPasswordOk = true; // Set to true when input is valid
