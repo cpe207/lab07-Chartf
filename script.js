@@ -14,23 +14,19 @@ function validateEmail(email) {
 firstNameInput.onkeyup = () => {
   passwordInput.classList.remove("is-valid");
   passwordInput.classList.remove("is-invalid");
-
-}
+};
 lastNameInput.onkeyup = () => {
   lastNameInput.classList.remove("is-valid");
   lastNameInput.classList.remove("is-invalid");
-
-}
+};
 emailInput.onkeyup = () => {
   emailInput.classList.remove("is-valid");
   emailInput.classList.remove("is-invalid");
-
-}
+};
 passwordInput.onkeyup = () => {
   passwordInput.classList.remove("is-valid");
   passwordInput.classList.remove("is-invalid");
-
-}
+};
 
 submitBtn.onclick = () => {
   let isFirstNameOk = false;
@@ -44,7 +40,6 @@ submitBtn.onclick = () => {
     isFirstNameOk = true; // Set to true when input is valid
   }
 
-  
   if (lastNameInput.value === "") {
     lastNameInput.classList.add("is-invalid");
   } else {
@@ -52,7 +47,6 @@ submitBtn.onclick = () => {
     isLastNameOk = true; // Set to true when input is valid
   }
 
-  
   if (emailInput.value === "" || !validateEmail(emailInput.value)) {
     emailInput.classList.add("is-invalid");
   } else {
@@ -60,7 +54,6 @@ submitBtn.onclick = () => {
     isEmailOk = true; // Set to true when input is valid
   }
 
-  
   if (passwordInput.value.length >= 6) {
     passwordInput.classList.add("is-valid");
     isPasswordOk = true; // Set to true when input is valid
