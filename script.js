@@ -4,7 +4,6 @@ const emailInput = document.querySelector("#email-input");
 const passwordInput = document.querySelector("#password-input");
 const submitBtn = document.querySelector("#submit-btn");
 
-//simple email validation
 function validateEmail(email) {
   var atPos = email.indexOf("@");
   var dotPos = email.lastIndexOf(".");
@@ -12,34 +11,35 @@ function validateEmail(email) {
 }
 
 firstNameInput.onkeyup = () => {
-  passwordInput.classList.remove("is-valid");
-  passwordInput.classList.remove("is-invalid");
+  firstNameInput.classList.remove("is-invalid");
+  firstNameInput.classList.remove("is-valid");
 };
+
 lastNameInput.onkeyup = () => {
-  lastNameInput.classList.remove("is-valid");
   lastNameInput.classList.remove("is-invalid");
+  lastNameInput.classList.remove("is-valid");
 };
+
 emailInput.onkeyup = () => {
-  emailInput.classList.remove("is-valid");
   emailInput.classList.remove("is-invalid");
+  emailInput.classList.remove("is-valid");
 };
+
 passwordInput.onkeyup = () => {
-  passwordInput.classList.remove("is-valid");
   passwordInput.classList.remove("is-invalid");
+  passwordInput.classList.remove("is-valid");
 };
 
 submitBtn.onclick = () => {
   let isFirstNameOk = false;
-  let isLastNameOk = false;
-  let isEmailOk = false;
-  let isPasswordOk = false;
   if (firstNameInput.value === "") {
     firstNameInput.classList.add("is-invalid");
   } else {
     firstNameInput.classList.add("is-valid");
-    isFirstNameOk = true; 
+    isFirstNameOk = true;
   }
 
+  let isLastNameOk = false;
   if (lastNameInput.value === "") {
     lastNameInput.classList.add("is-invalid");
   } else {
@@ -47,21 +47,23 @@ submitBtn.onclick = () => {
     isLastNameOk = true;
   }
 
+  let isEmailOk = false;
   if (emailInput.value === "" || !validateEmail(emailInput.value)) {
     emailInput.classList.add("is-invalid");
   } else {
     emailInput.classList.add("is-valid");
-    isEmailOk = true; 
+    isEmailOk = true;
   }
 
+  let isPasswordOk = false;
   if (passwordInput.value.length >= 6) {
     passwordInput.classList.add("is-valid");
-    isPasswordOk = true; 
   } else {
     passwordInput.classList.add("is-invalid");
   }
 
   if (isFirstNameOk && isLastNameOk && isEmailOk && isPasswordOk) {
-    alert("Registered successfully"); 
+    alert("Registered successfully");
   }
 };
+
