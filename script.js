@@ -37,31 +37,31 @@ submitBtn.onclick = () => {
     firstNameInput.classList.add("is-invalid");
   } else {
     firstNameInput.classList.add("is-valid");
-    isFirstNameOk = true; // Set to true when input is valid
+    isFirstNameOk = true; 
   }
 
   if (lastNameInput.value === "") {
     lastNameInput.classList.add("is-invalid");
   } else {
     lastNameInput.classList.add("is-valid");
-    isLastNameOk = true; // Set to true when input is valid
+    isLastNameOk = true;
   }
 
   if (emailInput.value === "" || !validateEmail(emailInput.value)) {
     emailInput.classList.add("is-invalid");
   } else {
     emailInput.classList.add("is-valid");
-    isEmailOk = true; // Set to true when input is valid
+    isEmailOk = true; 
   }
 
   if (passwordInput.value.length >= 6) {
     passwordInput.classList.add("is-valid");
-    isPasswordOk = true; // Set to true when input is valid
+    isPasswordOk = true; 
   } else {
     passwordInput.classList.add("is-invalid");
   }
 
   if (isFirstNameOk && isLastNameOk && isEmailOk && isPasswordOk) {
-    alert("Registered successfully"); // Display success message
+    alert("Registered successfully"); 
   }
 };
